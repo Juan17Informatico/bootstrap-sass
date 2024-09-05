@@ -1,3 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+header ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  background-color: rgb(148, 209, 199);
+  color: #fff;
+  padding: 16px;
+  font-weight: bold;
+}
+
+main {
+  padding: 16px;
+}
+main .boxes {
+  display: flex;
+  justify-content: space-between;
+}
+main .boxes .box {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(206, 203, 203);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: rgb(148, 209, 199);
+  color: #fff;
+  padding: 16px;
+  width: 100%;
+}
 
 /*# sourceMappingURL=index.css.map */

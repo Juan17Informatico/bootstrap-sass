@@ -1,7 +1,43 @@
+@import './partials/mixins';
+@import './partials/variables.scss';
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-header{}
+header{
+    ul{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        background-color: $company-color;
+        color: #fff;
+        padding: $padding-default;
+        font-weight: bold;
+    }
+}
 
-main{}
+main{
+    padding: $padding-default;
 
-footer{}
+    .boxes{
+        @include flex-between;  
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(206, 203, 203);
+        }
+    }
+
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    background-color: $company-color;
+    color: #fff;
+    padding: $padding-default;
+    width: 100%;
+}
