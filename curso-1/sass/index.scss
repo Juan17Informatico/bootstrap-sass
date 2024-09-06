@@ -1,5 +1,6 @@
 @import './partials/mixins';
 @import './partials/variables.scss';
+@import './partials/breakpoints.scss';
 
 *{
     padding: 0;
@@ -9,8 +10,7 @@
 
 header{
     ul{
-        display: flex;
-        justify-content: space-between;
+        @include flex-between;  
         list-style: none;
         background-color: $company-color;
         color: #fff;
@@ -23,10 +23,13 @@ main{
     padding: $padding-default;
 
     .boxes{
-        @include flex-between;  
+        @include flex-between;
+        flex-direction: column;
+        @include display-medium {
+            flex-direction: row;
+        }
         .box{
-            width: 100px;
-            height: 100px;
+            @include box;
             background-color: rgb(206, 203, 203);
         }
     }
@@ -41,3 +44,5 @@ footer{
     padding: $padding-default;
     width: 100%;
 }
+
+@include italic-links; 
